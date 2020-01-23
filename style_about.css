@@ -1,0 +1,40 @@
+.stylists {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px 10px;
+}
+.section {
+    grid-column: span 1;
+    padding: 10px 10px;
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+}
+.section img {
+    max-width: 100%;
+    height: auto;
+}
+.header {
+    grid-column: span 3;
+    text-align: center;
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 1px;
+    font-size: 3em;
+    /* font-family: 'Sacramento', cursive; */
+    padding: 10px 0px 10px 0px;
+    margin: 0;
+}
+.header2 {
+    font-size: 2em;
+    border-bottom-width: 0;
+}
+#story {
+    grid-column: span 3;
+    text-align: center;
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 1px;
+    padding: 20px 10px;
+}
