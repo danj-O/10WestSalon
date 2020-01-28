@@ -10,11 +10,11 @@
 #contactHead {
     grid-column: span 2;
     text-align: center;
-    border-style: solid;
-    border-width: 0;
-    border-bottom-width: 1px;
-    font-size: 3em;
-    padding: 10px 0px 10px 0px;
+    /* border-style: solid; */
+    /* border-width: 0; */
+    /* border-bottom-width: 1px; */
+    font-size: 1.2em;
+    /* padding: 10px 0px 10px 0px; */
     margin: 0;
 }
 .section {
@@ -57,5 +57,19 @@
         height:100%;
         width:100%;
         position:absolute;
+    }
+}
+@media screen and (max-width: 900px){
+    .contact {
+        padding-top: 12%;
+    } 
+}
+
+@media screen and (max-width: 600px){
+    .contact {
+        padding-top: 25%;
+    } 
+    .content-header {
+        font-size: 1.3em;
     }
 }
