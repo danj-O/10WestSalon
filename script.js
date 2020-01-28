@@ -2,10 +2,10 @@ window.onscroll = function() {scrollFunc()};
 
 const scrollFunc = () => {
   if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350){
-    document.querySelector('#logo').style.width = '60px';
+    document.querySelector('#logo').style.width = '74px';
     document.querySelector('.topnav').style.top = '0';
   } else {
-    document.querySelector('#logo').style.width = '100px';
+    document.querySelector('#logo').style.width = '115px';
     document.querySelector('.topnav').style.top = '15px';
 
   }
@@ -20,9 +20,11 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+window.onclick = function(event) {
+  if (!event.target.matches('.icon')) {
+    console.log('yep')
+    document.querySelector('.topnav').className = 'topnav'
+  }
+}
 
-// const handleMouseOverBox = (e) => {
-//   const targ =  e.target
-//   console.log(targ.className)
-//   // targ.childNodes[3].style.color = 'green'
-// }
+

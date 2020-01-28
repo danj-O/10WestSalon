@@ -10,7 +10,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Alegreya Sans SC', sans-serif;
-    color: white;
+    /* color: white; */
     font-size: 1em;
 }
 #mainnav {
@@ -18,6 +18,7 @@ body {
     display: flex;
     z-index: 1;
     background: rgba(0, 0, 0, 1);
+    /* background-image: url('./img/papyrus-dark.png'); */
     width: 100vw;
     align-items: center;
     will-change: transform;
@@ -31,6 +32,7 @@ body {
 .topnav a {
     transition: .2s;
     color: #f2f2f2;
+    /* color: black; */
     text-decoration: none;
     padding: 20px;
 }
@@ -39,7 +41,8 @@ body {
 
 }
 #logo {
-    width: 100px;
+    padding: 10px;
+    width: 115px;
     transition: .4s;
     z-index: 1;
 }
@@ -56,24 +59,20 @@ body {
     height: 59px;
 }
 
-
 @media screen and (max-width: 600px) {
-    /* .topnav a:not(:first-child) {
-        display: none;
-    } */
     .topnav a {
+        background: rgba(0, 0, 0, 1);
         display: none;
     }
     .topnav a.icon {
-      display: block;
+        background: rgb(223, 71, 71);
+        display: block;
     }
     .droplinks {
-        /* background: rgb(0, 0, 0, .8); */
     }
   }
   @media screen and (max-width: 600px) {
     #mainnav {
-    background: rgba(0, 0, 0, 1);
         
     }
     .topnav {
@@ -87,15 +86,17 @@ body {
     .topnav.responsive {
     }
     #logo {
-        /* width: 200%; */
+        width: 115px;
+        padding: 3px;
+        padding-left: 8px;
     }
     
     .topnav.responsive a {
-        background: rgba(0, 0, 0, 1);
         display: block;
     }
     .topnav.responsive .icon {
-        background: #df4747;
+        background: #ee6161;
+        color: black;
 
     }
   }
@@ -119,7 +120,7 @@ body {
 }
 @media screen and (max-width: 450px){
     #salonimage {
-        top: 95px;
+        top: 90px;
     }
 }
 #salonimage img {
@@ -131,13 +132,15 @@ body {
 
 #content {
     background: rgb(255, 255, 255);
+    background-image: url('./img/papyrus.png');
     color: black;
     position: relative;
-    top: 87vh;
+    top: 80vh;
     /* display: flex; */
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.5);
 }
 #main-content{
     margin: 0px 10px;
@@ -150,26 +153,37 @@ body {
     justify-content: space-evenly;
     /* border: 5px solid black; */
 }
+.content-header::before {
+    content: '';
+    /* display: block; */
+    background-image: url('./img/shears_left.svg') no-repeat;
+    width: 200px;
+    height: 200px;
+}
 .content-header {
     /* margin: 0px 0px; */
     text-align: center;
     padding: 1px;
     font-size: 1em;
+    background: rgb(255, 255, 255, .3);
+
 }
 .middle {
-    font-size: 1.2em;
-    color: rgb(163, 52, 52);
+    font-size: 1.3em;
+    /* color: rgb(163, 52, 52); */
 
     /* border-bottom: 1px solid black; */
 }
 .box {
     padding: 10px 10px;
-    /* padding-bottom: 20px; */
+    margin: 10px 0px;
     display: flex;
     flex-direction: column;
     max-width: 300px;
     transition: all .3s;
-
+    background: white;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
 }
 
 .box a {
@@ -180,9 +194,9 @@ body {
     position: relative;
     color: #df4747;
     font-size: 1.2em;
-    padding-top: 0px;
+    margin-bottom: 25px;
     transition: all .3s;
-    line-height: 4px;
+    line-height: 5px;
     
 }
 .sub-head::after {
@@ -194,10 +208,10 @@ body {
     left: 0px;
     width: 10%;
 
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
+    -o-transition:.3s;
+    -ms-transition:.3s;
+    -moz-transition:.3s;
+    -webkit-transition:.3s;
     transition: all ease-out .3s;
 }
 .box p {
@@ -222,6 +236,8 @@ body {
     width: 100%;
     height: auto;
     transition: all .3s;
+    /* box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 2px; */
 
 }
 @media screen and (max-width: 850px){
@@ -255,6 +271,11 @@ body {
         top: 50vh;
     }
 }
+/* @media screen and (max-width: 600px){
+    #content {
+        top: 20vh;
+    }
+} */
 @media screen and (max-width: 450px){
     #content {
         top: 50vh;
@@ -276,16 +297,34 @@ body {
     width: 100%;
     padding-top: 30px;
     padding-bottom: 30px;
+    background-image: url('./img/papyrus-dark.png');
+    box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.5);
+
     /* position: absolute; */
     /* bottom: 0; */
 }
 #footer-big-box {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin: 0px 20px;
 
 }
 .footbox {
     padding: 10px;
+    border-left: 1px dashed rgba(255, 255, 255, 0.281);
+    line-height: 25px;
+}
+.footlinks {
+    display: flex;
+    flex-direction: column;
+}
+.footlinks a {
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+}
+.footlinks a:hover {
+    color: #df4747;
 }
 .socialicons {
     display: flex;
@@ -303,7 +342,7 @@ body {
     height: 100%;
 }
 .foot-logo-box {
-    width: 100px;
+    width: 200px;
 }
 .foot-logo {
     width: 100%;
@@ -323,6 +362,12 @@ body {
     .socialicons {
         flex-direction: row;
         justify-content: center;
+    }
+    .footbox {
+        border: none;
+    }
+    .footlinks {
+        display: none;
     }
     .foot-logo-box {
         width: 40vw;
