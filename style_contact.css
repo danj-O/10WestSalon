@@ -1,10 +1,11 @@
 .contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* grid-auto-flow: row dense; */
-    /* grid-template-rows: 1fr 1fr; */
     grid-gap: 10px;
     padding: 10px 10px;
+    margin: 0;
+    padding-top: 8%;
+    background-image: url('./img/papyrus.png');
 }
 #contactHead {
     grid-column: span 2;
@@ -13,21 +14,17 @@
     border-width: 0;
     border-bottom-width: 1px;
     font-size: 3em;
-    /* font-family: 'Alegreya Sans SC', sans-serif; */
     padding: 10px 0px 10px 0px;
     margin: 0;
 }
 .section {
     grid-column: span 1;
     padding: 10px 50px;
-    /* border-style: solid; */
-    /* border-width: 1px; */
-    /* text-align: center; */
 }
 .map {
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
     height:0;
 }
 .map iframe {
@@ -38,11 +35,9 @@
     position:absolute;
 }
 .title {
-    /* font-family: 'Alegreya Sans SC', sans-serif; */
     font-size: 2em;
 }
 .title2 {
-    /* font-family: 'Alegreya Sans SC', sans-serif; */
     font-size: 1.3em;
 }
 @media only screen and (max-width: 950px){

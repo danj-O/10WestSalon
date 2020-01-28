@@ -12,9 +12,6 @@
     grid-gap: 10px;
     /* padding: 10px 10px; */
 }
-.products {
-    
-}
 #services {
     grid-column: span 2;
     text-align: center;
@@ -22,7 +19,6 @@
     border-width: 0;
     border-bottom-width: 1px;
     font-size: 3em;
-    /* font-family: 'Alegreya Sans SC', sans-serif; */
     padding: 10px 0px 10px 0px;
     margin: 0;
 }
@@ -34,11 +30,9 @@
     text-align: center;
 }
 .title {
-    /* font-family: 'Alegreya Sans SC', sans-serif; */
     font-size: 2em;
 }
 .title2 {
-    /* font-family: 'Alegreya Sans SC', sans-serif; */
     font-size: 1.3em;
 }
 @media only screen and (max-width: 950px){
