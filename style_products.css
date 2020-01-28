@@ -1,4 +1,56 @@
-.products {
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.products-container {
+    margin: 0;
+    padding-top: 8%;
+    background-image: url('./img/papyrus.png');
+}
+.content-header {
+    font-size: 2em;
+    
+}
+/* .box h2 {
+    position: relative;
+    color: #df4747;
+    font-size: 1.4em;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    transition: all .3s;
+    line-height: 10px;   
+} */
+
+@media screen and (max-width: 900px){
+    .products-container {
+        padding-top: 12%;
+    } 
+}
+
+@media screen and (max-width: 600px){
+    .products-container {
+        padding-top: 25%;
+    } 
+    .content-header {
+        font-size: 1.3em;
+    }
+    /* .content-sub-header {
+        padding: 1px 20px;
+        font-size: .7em;
+    }
+    .stylists-header h2 {
+        font-size: 2em;
+    } */
+}
+
+
+
+
+
+
+
+/* .products {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
@@ -11,7 +63,6 @@
     border-width: 0;
     border-bottom-width: 1px;
     font-size: 3em;
-    /* font-family: 'Sacramento', cursive; */
     padding: 10px 0px 10px 0px;
     margin: 0;
 }
@@ -33,7 +84,6 @@
     grid-row: 3 / span 2;
 }
 .title {
-    /* font-family: 'Sacramento', cursive; */
     font-size: 2em;
 }
 @media only screen and (max-width: 750px){
@@ -53,4 +103,4 @@
     .section1 {
         grid-column: span 1;
     }
-}
+} */
