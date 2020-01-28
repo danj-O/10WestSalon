@@ -22,7 +22,7 @@ function myFunction() {
 }
 window.onclick = function(event) {
   if (!event.target.matches('.icon')) {
-    console.log('yep')
+    // console.log('yep')
     document.querySelector('.topnav').className = 'topnav'
   }
 }

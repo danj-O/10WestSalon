@@ -1,40 +1,64 @@
-.stylists {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
-    padding: 10px 10px;
-}
-.section {
-    grid-column: span 1;
-    padding: 10px 10px;
-    border-style: solid;
-    border-width: 1px;
-    text-align: center;
-}
-.section img {
-    max-width: 100%;
-    height: auto;
-}
-.header {
-    grid-column: span 3;
-    text-align: center;
-    border-style: solid;
-    border-width: 0;
-    border-bottom-width: 1px;
-    font-size: 3em;
-    /* font-family: 'Sacramento', cursive; */
-    padding: 10px 0px 10px 0px;
+* {
+    padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
-.header2 {
+#about-container {
+    margin: 0;
+    padding-top: 8%;
+    background-image: url('./img/papyrus.png');
+}
+.content-header {
     font-size: 2em;
-    border-bottom-width: 0;
+    
 }
-#story {
-    grid-column: span 3;
+
+.content-sub-header {
     text-align: center;
-    border-style: solid;
-    border-width: 0;
-    border-bottom-width: 1px;
-    padding: 20px 10px;
+    padding: 1px 50px;
+    font-size: 1em;
+    background: rgb(255, 255, 255, .3);
+}
+.stylists-header {
+    text-align: center;
+}
+.stylists-header h2 {
+    font-size: 3em;
+}
+.box-row {
+    /* margin: 10px 130px; */
+}
+.box {
+    /* margin: 10px 20px; */
+}
+.box h2 {
+    position: relative;
+    color: #df4747;
+    font-size: 1.4em;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    transition: all .3s;
+    line-height: 10px;
+    
+}
+@media screen and (max-width: 900px){
+    #about-container {
+        padding-top: 12%;
+    } 
+}
+
+@media screen and (max-width: 600px){
+    #about-container {
+        padding-top: 25%;
+    } 
+    .content-header {
+        font-size: 1.3em;
+    }
+    .content-sub-header {
+        padding: 1px 20px;
+        font-size: .7em;
+    }
+    .stylists-header h2 {
+        font-size: 2em;
+    }
 }

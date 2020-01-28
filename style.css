@@ -147,19 +147,19 @@ body {
 
 }
 .box-row {
-    margin: 0px 30px;
+    margin: 0px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     /* border: 5px solid black; */
 }
-.content-header::before {
+/* .content-header::before {
     content: '';
-    /* display: block; */
+    display: block;
     background-image: url('./img/shears_left.svg') no-repeat;
     width: 200px;
     height: 200px;
-}
+} */
 .content-header {
     /* margin: 0px 0px; */
     text-align: center;
