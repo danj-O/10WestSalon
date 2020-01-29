@@ -15,12 +15,13 @@
 
 .content-sub-header {
     text-align: center;
-    padding: 1px 50px;
+    padding: 30px 50px;
     font-size: 1em;
     background: rgb(255, 255, 255, .3);
 }
 .stylists-header {
     text-align: center;
+    font-size: 1.7em;
 }
 .stylists-header h2 {
     font-size: 3em;
@@ -52,11 +53,11 @@
         padding-top: 25%;
     } 
     .content-header {
-        font-size: 1.3em;
+        font-size: 2em;
     }
     .content-sub-header {
         padding: 1px 20px;
-        font-size: .7em;
+        font-size: 1em;
     }
     .stylists-header h2 {
         font-size: 2em;
