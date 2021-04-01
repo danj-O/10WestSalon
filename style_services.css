@@ -32,11 +32,15 @@
     border-width: 1px;
     text-align: center;
 }
-.title {
-    font-size: 2em;
+.section-title {
+  font-size: 2em;
+  text-decoration: underline;
+
 }
-.title2 {
-    font-size: 1.3em;
+.title {
+}
+.service {
+  margin: 20px;
 }
 @media only screen and (max-width: 950px){
     .section {
