@@ -1,11 +1,11 @@
 # Updating site content
 
-All editable copy and pricing for the marketing site lives in this folder (`web/src/data/`).  
+All editable copy and pricing for the marketing site lives in this folder (`src/data/`).  
 After you change any file, save it and refresh the dev server, or run `npm run build` before deploy.
 
 ## Images (WebP)
 
-Raster images are stored as **`.webp`** under **`web/public/img/`** (and `public/img/products/`). Paths in data files look like `/img/shop.webp` or `/img/products/olaplex.webp`.
+Raster images are stored as **`.webp`** under **`public/img/`** (and `public/img/products/`). Paths in data files look like `/img/shop.webp` or `/img/products/olaplex.webp`.
 
 To add a new photo:
 
@@ -15,7 +15,7 @@ To add a new photo:
 
 SVG logos (`10west_logo.svg`, etc.) stay as SVG — no need to convert.
 
-**Social / SEO preview image:** `web/public/og-image.webp` (and `og-image.png`) — used for Open Graph and Twitter cards; built from the favicon. Regenerate with ffmpeg if you replace the brand mark.
+**Social / SEO preview image:** `public/og-image.webp` (and `og-image.png`) — used for Open Graph and Twitter cards; built from the favicon. Regenerate with ffmpeg if you replace the brand mark.
 
 ## Files
 
@@ -31,8 +31,8 @@ SVG logos (`10west_logo.svg`, etc.) stay as SVG — no need to convert.
 
 ## Other routes (not in `data/` only)
 
-- **`/privacy`** — legal copy lives in `web/src/app/privacy/page.tsx` (short policy + analytics note).
-- **Sitemap / robots** — generated at build from `web/src/app/sitemap.ts` and `robots.ts`.
+- **`/privacy`** — legal copy lives in `src/app/privacy/page.tsx` (short policy + analytics note).
+- **Sitemap / robots** — generated at build from `src/app/sitemap.ts` and `robots.ts`.
 
 ## TypeScript
 
@@ -41,4 +41,4 @@ These are `.ts` files: use **straight double quotes** for strings, commas betwee
 ## Adding a nav item
 
 1. Add `{ href: "/your-page", label: "Label" }` to `navLinks` in `site.ts`.  
-2. Create the matching route under `web/src/app/your-page/page.tsx` (or ask a developer to).
+2. Create the matching route under `src/app/your-page/page.tsx` (or ask a developer to).
