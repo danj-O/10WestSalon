@@ -16,32 +16,38 @@ export default function ProductsPage() {
     <>
       <InnerPage>
         <h1 className="mb-8 text-center font-display text-4xl font-black max-[600px]:text-2xl">Products</h1>
-        <div className="flex flex-wrap justify-evenly gap-4 px-5 pb-16">
-          {productTiles.map((tile) => {
-            const img = (
-              <Image
-                src={tile.imageSrc}
-                alt={tile.imageAlt}
-                width={tile.wide ? 800 : 400}
-                height={300}
-                className={`h-auto max-w-full shadow ${tile.wide ? "w-full md:max-w-[90%]" : "w-full max-w-[300px]"}`}
-              />
-            );
-            return (
-              <div
-                key={tile.imageSrc}
-                className={`flex justify-center p-2 ${tile.wide ? "w-full basis-full" : "max-w-[300px] basis-[300px] grow"}`}
-              >
-                {tile.href ? (
-                  <a href={tile.href} target="_blank" rel="noopener noreferrer" className="block">
-                    {img}
-                  </a>
-                ) : (
-                  img
-                )}
-              </div>
-            );
-          })}
+        <div className="mx-auto max-w-6xl px-5 pb-16">
+          {/* Multi-column masonry: portrait + landscape stack without forced crops */}
+          <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
+            {productTiles.map((tile) => {
+              const inner = (
+                <Image
+                  src={tile.imageSrc}
+                  alt={tile.imageAlt}
+                  width={tile.width}
+                  height={tile.height}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="h-auto w-full rounded-md bg-neutral-100/80 shadow-md ring-1 ring-black/5"
+                />
+              );
+              return (
+                <article key={tile.imageSrc} className="mb-6 break-inside-avoid">
+                  {tile.href ? (
+                    <a
+                      href={tile.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block transition hover:opacity-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                    >
+                      {inner}
+                    </a>
+                  ) : (
+                    inner
+                  )}
+                </article>
+              );
+            })}
+          </div>
         </div>
       </InnerPage>
       <SiteFooter />

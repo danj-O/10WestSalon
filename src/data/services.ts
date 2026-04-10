@@ -7,7 +7,8 @@
  * STRUCTURE
  * ---------
  * `serviceBlocks` is a top-to-bottom list of bordered columns on the page (on
- * desktop you get a 2-column grid; blocks flow in order).
+ * desktop you get a 2-column grid; blocks flow in order). Example headings:
+ * Standard Services, Hair Coloring, Waxing, Nails.
  *
  * Each block has:
  *   • title     — section heading (e.g. "Standard Services")
@@ -56,15 +57,15 @@ export const serviceBlocks: ServiceBlock[] = [
   {
     title: "Standard Services",
     entries: [
-      { kind: "line", title: "Woman's Haircut & Style", price: "$57.00" },
-      { kind: "line", title: "Woman's Cut Only/No Finish Style", price: "$45.00" },
-      { kind: "line", title: "Shampoo-Blow dry Style", price: "$33.00+" },
-      { kind: "line", title: "Extra Styling/finish (long hair)", price: "$6.00" },
-      { kind: "line", title: "Men's Cut/Style", price: "$30.00" },
-      { kind: "line", title: "Boy's Cut/Style (13-18)", price: "$23.00" },
-      { kind: "line", title: "Girl's Cut/Style (13-18)", price: "$42.00" },
-      { kind: "line", title: "Children's Cut (12 & under)", price: "$20.00" },
-      { kind: "line", title: "Special Occasion/Up-Do", price: "$50.00+" },
+      { kind: "line", title: "Women's Cut & Style", price: "$60.00" },
+      { kind: "line", title: "Women's Cut Only", price: "$50.00" },
+      { kind: "line", title: "Shampoo Blow Dry Style", price: "$35.00" },
+      { kind: "line", title: "Extra Styling Finish / long hair", price: "$6.00+" },
+      { kind: "line", title: "Men's Cut / Style", price: "$30.00" },
+      { kind: "line", title: "Boys Cut (13–18)", price: "$25.00" },
+      { kind: "line", title: "Girls Cut / Style (age 10+)", price: "$45.00" },
+      { kind: "line", title: "Children's Cut (under 10 yrs)", price: "$30.00" },
+      { kind: "line", title: "Special Occasion / Up-do", price: "$60.00+" },
       { kind: "note", text: "*Bang trim always complimentary" },
       {
         kind: "line",
@@ -79,35 +80,33 @@ export const serviceBlocks: ServiceBlock[] = [
         description: "The ultimate conditioning treatment",
         price: "$25.00",
       },
-      { kind: "line", title: "Special Occasion/Up-Do", price: "$47.00" },
       { kind: "line", title: "Bridal Hair", price: "Consultation" },
     ],
   },
   {
-    title: "Color Enhancements",
+    title: "Hair Coloring",
     intro:
-      "Color is the essential element that makes your cut and style come together. It can add movement to lifeless hair and will personalize your hair to make it your own.\n\nHighlights starting at 35 for a few and up to 80 for the highlight addicted.",
+      "Color is the essential element that makes your cut and style come together. It can add movement to lifeless hair and will personalize your hair to make it your own.\n\nAccent foils from $50; partial foils from $80+; full foils from $110+.",
     entries: [
       {
         kind: "line",
         title: "Single Process",
-        description: "Lisap of Milan, Matrix and Redken are our color brands.",
-        price: "$60.00",
+        description: "Lisap of Milan and Matrix are our color brands.",
+        price: "$65.00",
       },
-      { kind: "line", title: "Overlay/Toner", price: "$22.00" },
+      { kind: "line", title: "Overlay / Toner", price: "$10.00" },
       {
         kind: "line",
-        title: "Quickie 23",
+        title: "Quickie Color",
         description:
           "Quick color touch-up to get you by. Can only be performed up to 3 weeks after initial single process all over color.",
-        price: "$28.00",
+        price: "$30.00",
       },
-      { kind: "line", title: "Quickie Take-Home Kit", price: "$28.00" },
-      { kind: "line", title: "Accent Foils", price: "$50.00+" },
-      { kind: "line", title: "Partial Foil", price: "$75.00+" },
-      { kind: "line", title: "Full Foil", price: "$100.00+" },
+      { kind: "line", title: "Accent Foils", price: "$50.00" },
+      { kind: "line", title: "Partial Foils", price: "$80.00+" },
+      { kind: "line", title: "Full Foils", price: "$110.00+" },
       { kind: "line", title: "Customized Colors or Technique", price: "Consultation" },
-      { kind: "line", title: "Men's Color", price: "$30.00" },
+      { kind: "line", title: "Men's Color", price: "$35.00" },
       { kind: "line", title: "Corrective Color", price: "Consultation" },
     ],
     subblocks: [

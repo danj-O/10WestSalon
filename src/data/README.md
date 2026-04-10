@@ -13,9 +13,9 @@ To add a new photo:
 2. Put the file in `public/img/` (or `public/img/products/`).
 3. Reference it in the data file with a leading slash: `/img/yourfile.webp`.
 
-SVG logos (`10west_logo.svg`, etc.) stay as SVG — no need to convert.
+**Brand logo:** the site uses **`/img/10west_logo.webp`** (exported from `10west_logo.png`). Regenerate WebP with ffmpeg after updating the PNG; also refresh `public/og-image.*` and `public/10westfav.png` if you change the logo (see project README or ask a dev).
 
-**Social / SEO preview image:** `public/og-image.webp` (and `og-image.png`) — used for Open Graph and Twitter cards; built from the favicon. Regenerate with ffmpeg if you replace the brand mark.
+**Social / SEO preview image:** `public/og-image.webp` — used for Open Graph and Twitter cards (see root `README.md` for regenerating from the logo).
 
 ## Files
 

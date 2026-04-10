@@ -10,7 +10,7 @@ export function LocalBusinessJsonLd() {
     "@type": "HairSalon",
     name: site.name,
     description: defaultDescription,
-    image: `${site.canonicalBase}/og-image.webp`,
+    image: [`${site.canonicalBase}/img/10west_logo_white.webp`, `${site.canonicalBase}/og-image.webp`],
     url: site.canonicalBase,
     telephone: site.phoneTel,
     email: site.email,

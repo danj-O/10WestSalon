@@ -58,7 +58,7 @@ export const homeCardRows: HomeCard[][] = [
     {
       href: "/products",
       imageSrc: "/img/products/olaplex.webp",
-      imageAlt: "Olaplex, Redken, and salon products",
+      imageAlt: "Olaplex and salon products",
       heading: "Products",
       body: "We have our own 10 West hair products as well as the top big brands. Check it out here.",
     },

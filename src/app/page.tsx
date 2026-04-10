@@ -15,7 +15,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-[url('/img/papyrus.webp')] text-black">
       {/* In-flow hero (below fixed header) — no fixed / scroll-over effect */}
-      <section className="pt-14 md:pt-16">
+      <section className="pt-[4.5rem]">
         <div className="relative aspect-[16/10] max-h-[min(52vh,520px)] w-full min-h-[200px] sm:aspect-[2/1] sm:max-h-[min(48vh,560px)]">
           <Image
             src="/img/shop-from-counter.webp"

@@ -26,14 +26,27 @@ export default function AboutPage() {
           {stylists.map((s) => (
             <div
               key={s.name}
-              className="flex max-w-[300px] flex-col rounded bg-white p-2.5 shadow-md max-[450px]:max-w-full"
+              className="flex w-full max-w-[300px] flex-col rounded bg-white p-2.5 shadow-md max-[450px]:max-w-full"
             >
-              <Image src={s.imageSrc} alt={s.imageAlt} width={300} height={360} className="h-auto w-full" />
+              <div className="flex w-full justify-center rounded-sm bg-neutral-100 p-1">
+                <Image
+                  src={s.imageSrc}
+                  alt={s.imageAlt}
+                  width={300}
+                  height={500}
+                  className="h-auto w-full max-w-[300px] object-contain"
+                  sizes="(max-width: 450px) 92vw, 300px"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
               <h3 className="relative mt-2 text-center text-xl text-brand">
                 <span className="relative inline-block pb-3 after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-[10%] after:-translate-x-1/2 after:bg-brand">
                   {s.name}
                 </span>
               </h3>
+              {s.role ? (
+                <p className="mt-1 text-center text-sm font-medium text-neutral-600">{s.role}</p>
+              ) : null}
             </div>
           ))}
         </div>

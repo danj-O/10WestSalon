@@ -28,7 +28,6 @@ export const metadata: Metadata = {
     template: "%s | 10 West Salon",
   },
   description: defaultDescription,
-  icons: { icon: "/10westfav.png" },
   openGraph: {
     type: "website",
     locale: "en_US",

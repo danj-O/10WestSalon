@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useId, useState } from "react";
@@ -35,31 +36,37 @@ export function SiteNav() {
 
   return (
     <>
-      <header className="fixed top-0 z-[200] flex w-full items-center bg-black shadow-md">
-        <Link href="/" className="z-[1] w-[115px] p-2 pl-2">
-          {/* SVG: plain <img> avoids next/image dev warnings on responsive SVG sizing; no raster optimization needed */}
-          <img
-            src="/img/10west_logo.svg"
+      <header className="fixed top-0 z-[200] flex min-h-[4.5rem] w-full items-center border-b border-neutral-800/70 bg-black px-4 shadow-md sm:px-6 md:px-8">
+        <Link
+          href="/"
+          className="z-[1] flex shrink-0 items-center rounded-md px-2 py-2 sm:px-3 sm:py-2.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+        >
+          <Image
+            src="/img/10west_logo_white.webp"
             alt="10 West Salon"
-            width={115}
-            height={48}
-            className="h-auto w-full"
-            fetchPriority="high"
+            width={640}
+            height={346}
+            className="h-10 w-auto max-w-[120px] sm:h-11"
+            priority
           />
         </Link>
 
         <nav className="ml-auto hidden items-center md:flex" aria-label="Main">
           {navLinks.map(({ href, label }) => (
-            <Link key={href} href={href} className="px-5 py-5 text-neutral-100 transition-colors hover:text-brand">
+            <Link
+              key={href}
+              href={href}
+              className="px-4 py-4 text-neutral-100 transition-colors hover:text-brand lg:px-5"
+            >
               {label}
             </Link>
           ))}
         </nav>
 
-        <div className="ml-auto flex md:hidden">
+        <div className="ml-auto flex shrink-0 md:hidden">
           <button
             type="button"
-            className="flex h-14 w-14 flex-col items-center justify-center gap-1.5 text-neutral-100 hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className="flex h-12 w-12 flex-col items-center justify-center gap-1.5 rounded-md text-neutral-100 hover:bg-white/5 hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:h-14 sm:w-14"
             onClick={() => setMenuOpen((o) => !o)}
             aria-expanded={menuOpen}
             aria-controls={menuId}
@@ -86,7 +93,7 @@ export function SiteNav() {
 
       {/* Mobile menu: backdrop + panel (below header so bar stays tappable) */}
       <div
-        className={`fixed inset-x-0 bottom-0 top-14 z-[190] md:hidden ${
+        className={`fixed inset-x-0 bottom-0 top-[4.5rem] z-[190] md:hidden ${
           menuOpen ? "pointer-events-auto" : "pointer-events-none"
         }`}
         aria-hidden={!menuOpen}

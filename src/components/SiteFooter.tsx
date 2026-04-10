@@ -49,13 +49,13 @@ export function SiteFooter() {
           ))}
         </div>
         <div className="w-[200px] max-[450px]:w-[40vw]">
-          {/* SVG: see SiteNav — same reasoning */}
-          <img
-            src="/img/10west_logo.svg"
+          <Image
+            src="/img/10west_logo_white.webp"
             alt="10 West Salon"
-            width={200}
-            height={80}
-            className="h-auto w-full"
+            width={640}
+            height={346}
+            className="w-full"
+            style={{ width: "100%", height: "auto" }}
           />
         </div>
       </div>

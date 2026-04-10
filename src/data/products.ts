@@ -1,47 +1,108 @@
 /**
  * PRODUCTS GRID (/products)
  * --------------------------
- * A simple list of tiles: image + optional link to a brand or product site.
+ * Masonry-style columns: mixed portrait/landscape images keep their aspect ratio.
  *
  * HOW TO UPDATE
  * -------------
- * • Add a tile: push `{ imageSrc, imageAlt, href?, wide? }` onto `productTiles`.
- * • Remove: delete that array entry.
- * • Reorder: move entries; the page renders in array order.
+ * • Add WebP under `public/img/products/`, then add an entry with **width** and **height**
+ *   (intrinsic pixels — run `ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 your.webp`).
+ * • Remove: delete the file and its array entry.
  *
  * FIELDS
  * ------
- * • imageSrc — path under `public/`, always starting with `/`. Use **WebP** files
- *              (e.g. `/img/products/foo.webp`). Add files to `public/img/products/`.
- * • imageAlt — short description for accessibility (and SEO). Don’t leave empty.
- * • href     — if set, the image becomes a clickable link (opens new tab).
- *              Omit `href` for a logo/image with no outbound link.
- * • wide     — if true, the tile is allowed to span wider on large screens
- *              (good for a banner-style image like CBD).
- *
- * After adding new images, run `npm run dev` and hard-refresh the browser.
+ * • imageSrc, imageAlt — path and accessibility text.
+ * • width, height — intrinsic dimensions (for Next/Image layout; not a crop).
+ * • href — optional; opens in a new tab when set.
  */
 
 export type ProductTile = {
-  imageSrc: string;
-  imageAlt: string;
-  href?: string;
-  wide?: boolean;
-};
+  imageSrc: string
+  imageAlt: string
+  /** Intrinsic width in pixels (for layout / aspect ratio). */
+  width: number
+  /** Intrinsic height in pixels. */
+  height: number
+  href?: string
+}
 
+/** Every WebP in `public/img/products/` — keep this list in sync when adding files. */
 export const productTiles: ProductTile[] = [
-  { imageSrc: "/img/products/cbd.webp", imageAlt: "CBD Daily products", wide: true },
-  { imageSrc: "/img/products/redken.webp", imageAlt: "Redken", href: "https://www.redken.com/" },
   {
-    imageSrc: "/img/products/paulmitchell.webp",
-    imageAlt: "Paul Mitchell",
-    href: "https://www.paulmitchell.com/",
+    imageSrc: "/img/products/awapuhi.webp",
+    imageAlt: "Paul Mitchell Awapuhi Wild Ginger products",
+    width: 480,
+    height: 640,
+    href: "https://www.paulmitchell.com/pages/awapuhi-wild-ginger",
+  },
+  {
+    imageSrc: "/img/products/awapuhi2.webp",
+    imageAlt: "Paul Mitchell Awapuhi Wild Ginger products",
+    width: 640,
+    height: 480,
+    href: "https://www.paulmitchell.com/pages/awapuhi-wild-ginger",
+  },
+  {
+    imageSrc: "/img/products/gelish_logo.webp",
+    imageAlt: "Gelish nail products",
+    width: 474,
+    height: 351,
+    href: "https://gelish.com/",
   },
   {
     imageSrc: "/img/products/keratincoppola.webp",
     imageAlt: "Keratin smoothing treatments",
-    href: "https://keratincomplex.com/services/smoothing-treatments",
+    width: 960,
+    height: 701,
+    href: "https://keratincomplex.com/",
   },
-  { imageSrc: "/img/products/devacurl.webp", imageAlt: "DevaCurl", href: "https://www.devacurl.com/" },
-  { imageSrc: "/img/products/olaplex.webp", imageAlt: "Olaplex", href: "https://olaplex.com/" },
-];
+  {
+    imageSrc: "/img/products/nioxin.webp",
+    imageAlt: "Nioxin scalp and hair care",
+    width: 480,
+    height: 640,
+    href: "https://www.nioxin.com/",
+  },
+  {
+    imageSrc: "/img/products/olaplex.webp",
+    imageAlt: "Olaplex",
+    width: 4032,
+    height: 3024,
+    href: "https://olaplex.com/",
+  },
+  {
+    imageSrc: "/img/products/paulmitchell.webp",
+    imageAlt: "Paul Mitchell",
+    width: 4032,
+    height: 3024,
+    href: "https://www.paulmitchell.com/",
+  },
+  {
+    imageSrc: "/img/products/paulmitchell2.webp",
+    imageAlt: "Paul Mitchell products on display",
+    width: 480,
+    height: 640,
+    href: "https://www.paulmitchell.com/",
+  },
+  {
+    imageSrc: "/img/products/redken.webp",
+    imageAlt: "Redken hair care",
+    width: 640,
+    height: 480,
+    href: "https://www.redken.com/",
+  },
+  {
+    imageSrc: "/img/products/redken2.webp",
+    imageAlt: "Redken products",
+    width: 640,
+    height: 480,
+    href: "https://www.redken.com/",
+  },
+  {
+    imageSrc: "/img/products/teatree.webp",
+    imageAlt: "Paul Mitchell Tea Tree hair care",
+    width: 640,
+    height: 480,
+    href: "https://www.paulmitchell.com/tea-tree/",
+  },
+]
