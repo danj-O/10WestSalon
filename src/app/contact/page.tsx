@@ -14,30 +14,32 @@ export default function ContactPage() {
   return (
     <>
       <InnerPage>
-        <div className="grid grid-cols-1 gap-2 px-2 pb-16 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 px-2 pb-16 md:grid-cols-2 md:gap-8">
           <div className="col-span-1 text-center md:col-span-2">
             <PageHeading>Contact / Find Us!</PageHeading>
           </div>
-          <section className="min-w-0 rounded bg-white px-8 py-6 shadow-md md:px-12">
-            <p className="text-2xl">10 West Hair Salon</p>
-            <p className="mt-4 text-xl leading-relaxed">
-              {site.address.street} Chagrin Falls, Ohio
+          <section className="min-w-0 rounded bg-white px-6 py-6 text-left text-base leading-relaxed text-neutral-800 shadow-md md:px-8 md:py-8">
+            <p className="font-semibold text-neutral-900">10 West Hair Salon</p>
+            <p className="mt-4">
+              {site.address.street}
               <br />
-              Phone: ({site.phoneDisplay.slice(0, 3)}){site.phoneDisplay.slice(4)}
-              <br />
-              <br />
-              Hours:
-              <br />
-              {site.hours.map((line) => (
-                <span key={line}>
-                  {line}
-                  <br />
-                </span>
-              ))}
-              <br />
-              <br />
-              Call to request an appointment!
+              {site.address.city} {site.address.zip}
             </p>
+            <p className="mt-4">
+              Phone:{" "}
+              <a href={`tel:${site.phoneTel}`} className="text-brand hover:underline">
+                {site.phoneDisplay}
+              </a>
+            </p>
+            <div className="mt-4">
+              <p className="font-medium text-neutral-900">Hours</p>
+              <ul className="mt-1 list-none space-y-0.5 pl-0">
+                {site.hours.map((line) => (
+                  <li key={line}>{line}</li>
+                ))}
+              </ul>
+            </div>
+            <p className="mt-6 text-neutral-700">Call to request an appointment!</p>
           </section>
           <section className="relative min-h-0 overflow-hidden rounded bg-white pb-[56.25%] shadow-md">
             <iframe
