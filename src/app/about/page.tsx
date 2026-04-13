@@ -28,7 +28,7 @@ export default function AboutPage() {
               key={s.name}
               className="flex w-full max-w-[300px] flex-col rounded bg-white p-2.5 shadow-md max-[450px]:max-w-full"
             >
-              <div className="flex w-full justify-center rounded-sm bg-neutral-100 p-1">
+              <div className="flex w-full justify-center overflow-hidden rounded-sm bg-white">
                 <Image
                   src={s.imageSrc}
                   alt={s.imageAlt}
