@@ -39,8 +39,8 @@ export const homeCardRows: HomeCard[][] = [
   [
     {
       href: "/about",
-      imageSrc: "/img/salon.webp",
-      imageAlt: "Interior of 10 West Salon, Chagrin Falls",
+      imageSrc: "/img/entrance.webp",
+      imageAlt: "Entrance to 10 West Salon, Chagrin Falls",
       heading: "About Us",
       body: "Learn more about us and get to know our stylists.",
     },
@@ -53,8 +53,8 @@ export const homeCardRows: HomeCard[][] = [
     },
     {
       href: "/services",
-      imageSrc: "/img/shop.webp",
-      imageAlt: "10 West Salon interior",
+      imageSrc: "/img/salon.webp",
+      imageAlt: "Interior of 10 West Salon, Chagrin Falls",
       heading: "Services",
       body: "We have a wide range of services. Click here to see our services and price list.",
     },
