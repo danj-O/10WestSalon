@@ -1,33 +1,13 @@
 /**
- * HOME PAGE (/) — hero headline, gift line, and feature card rows
- * -----------------------------------------------------------------
+ * HOME PAGE (/) — hero headline, gift line, feature cards, hiring strip
+ * -----------------------------------------------------------------------
  * Used only by `app/page.tsx`. Does not change the navigation bar (that’s `site.ts`).
  *
- * homeIntro
- * ---------
- * • h1 — main headline (currently includes phone; if you change the number, also
- *        update `site.ts` phone fields).
- * • h2 — subhead / tagline (quote marks are part of the string).
+ * homeIntro.lines — main page title: one h1 with multiple lines (name, location, phone).
+ * homeGiftLine — secondary heading (h2) below the cards; gift certificate message.
+ * homeHiring — optional “we’re hiring” image + mailto (shown above footer).
  *
- * homeGiftLine
- * ------------
- * Shown once in a banner above the footer on the home page.
- *
- * homeCardRows
- * ------------
- * Array of ROWS; each row is an array of cards. Row 1 = first strip of tiles, row 2 = second.
- *
- * Per card:
- *   • href      — internal path like "/services" OR full URL for external sites.
- *   • imageSrc  — `.webp` under `public/img/` (see README in this folder).
- *   • imageAlt  — accessibility text.
- *   • heading   — card title (red heading on the site).
- *   • body      — short blurb under the title.
- *   • external  — set `true` when `href` is outside this site (e.g. https://gelish.com/).
- *                 Opens in a new tab. Omit or false for internal Next.js routes.
- *
- * Adding a card: append to the correct inner array. New row: add `[ ...cards ]` to
- * `homeCardRows`.
+ * homeCardRows — rows of link cards (see type `HomeCard`).
  */
 
 export type HomeCard = {
@@ -39,28 +19,37 @@ export type HomeCard = {
   external?: boolean;
 };
 
+/** Main headline — rendered as one h1 with each string on its own line. */
 export const homeIntro = {
-  h1: "10 West Salon, Chagrin Falls, Ohio 440-247-8474",
-  h2: `"Chagrin's best kept salon secret"`,
+  lines: ["10 West Salon", "Chagrin Falls, Ohio", "440-247-8474"] as const,
+  /** Optional tagline (not shown on current layout unless you add it back). */
+  tagline: `"Chagrin's best kept salon secret"`,
 };
 
 export const homeGiftLine = "Gift certificates are always available! Call in or stop by!";
+
+/** Hiring banner above footer — image links to email. */
+export const homeHiring = {
+  imageSrc: "/img/hiring.webp",
+  imageAlt: "We're hiring — email to apply at 10 West Salon",
+  email: "stjohnkelle@yahoo.com",
+};
 
 export const homeCardRows: HomeCard[][] = [
   [
     {
       href: "/about",
-      imageSrc: "/img/staff.webp",
-      imageAlt: "Hair stylists of 10 West Salon Chagrin Falls",
+      imageSrc: "/img/entrance.webp",
+      imageAlt: "Entrance to 10 West Salon, Chagrin Falls",
       heading: "About Us",
       body: "Learn more about us and get to know our stylists.",
     },
     {
       href: "/products",
       imageSrc: "/img/products/olaplex.webp",
-      imageAlt: "Olaplex and salon products",
+      imageAlt: "Salon retail hair care products",
       heading: "Products",
-      body: "We have our own 10 West hair products as well as the top big brands. Check it out here.",
+      body: "Paul Mitchell, Redken, It's a 10, and Nioxin are a few of our product lines.",
     },
     {
       href: "/services",
@@ -68,30 +57,6 @@ export const homeCardRows: HomeCard[][] = [
       imageAlt: "10 West Salon interior",
       heading: "Services",
       body: "We have a wide range of services. Click here to see our services and price list.",
-    },
-  ],
-  [
-    {
-      href: "/keratin",
-      imageSrc: "/img/products/keratincoppola.webp",
-      imageAlt: "Keratin Complex smooth straight hair",
-      heading: "Restructuring",
-      body: "3 treatments available. We will help you choose the one that is best for you.",
-    },
-    {
-      href: "/products",
-      imageSrc: "/img/products/olaplex.webp",
-      imageAlt: "Olaplex conditioning",
-      heading: "Products",
-      body: "The ultimate in conditioning treatments!",
-    },
-    {
-      href: "https://gelish.com/",
-      imageSrc: "/img/products/gelish_logo.webp",
-      imageAlt: "Gelish nail products",
-      heading: "Gelish.com",
-      body: "Gel Nails by Gelish",
-      external: true,
     },
   ],
 ];

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { InnerPage } from "@/components/InnerPage";
+import { PageHeading } from "@/components/PageHeading";
+import { SectionHeading } from "@/components/SectionHeading";
 import { SiteFooter } from "@/components/SiteFooter";
-import { aboutIntro, stylists } from "@/data/about";
+import { aboutHeroImage, aboutIntro, stylists } from "@/data/about";
 import { defaultDescription, site } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -15,13 +17,22 @@ export default function AboutPage() {
   return (
     <>
       <InnerPage>
-        <h1 className="text-center font-display text-5xl font-black max-[600px]:text-3xl">About Us</h1>
-        <p className="mx-auto max-w-4xl bg-white/30 px-6 py-8 text-center text-xl leading-relaxed max-[600px]:px-5 max-[600px]:text-base">
+        <PageHeading>About Us</PageHeading>
+        <div className="relative mx-auto mt-6 max-w-4xl overflow-hidden rounded-lg shadow-md ring-1 ring-black/5">
+          <Image
+            src={aboutHeroImage.imageSrc}
+            alt={aboutHeroImage.imageAlt}
+            width={640}
+            height={480}
+            className="h-auto w-full object-cover"
+            sizes="(max-width: 896px) 92vw, 56rem"
+            priority
+          />
+        </div>
+        <p className="mx-auto mt-8 max-w-4xl bg-white/30 px-6 py-8 text-center text-xl leading-relaxed max-[600px]:px-5 max-[600px]:text-base">
           {aboutIntro}
         </p>
-        <h2 className="mt-8 text-center font-display text-4xl font-black text-black max-[600px]:text-3xl">
-          Our Stylists
-        </h2>
+        <SectionHeading className="mt-8">Our Stylists</SectionHeading>
         <div className="flex flex-wrap justify-evenly gap-4 px-5 py-6">
           {stylists.map((s) => (
             <div

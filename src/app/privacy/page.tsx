@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { InnerPage } from "@/components/InnerPage";
+import { PageHeading } from "@/components/PageHeading";
 import { SiteFooter } from "@/components/SiteFooter";
 import { site } from "@/data/site";
 
@@ -16,7 +17,7 @@ export default function PrivacyPage() {
     <>
       <InnerPage>
         <article className="mx-auto max-w-2xl px-4 pb-16 leading-relaxed">
-          <h1 className="mb-8 font-display text-3xl font-black">Privacy</h1>
+          <PageHeading align="left">Privacy</PageHeading>
           <p className="mb-4 text-neutral-800">
             This site is operated by {site.name}. We collect only what is typical for a small
             business website: for example, if you call or email us, that contact happens outside

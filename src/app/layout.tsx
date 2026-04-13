@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Alegreya_Sans_SC, Playfair_Display } from "next/font/google";
+import { Inter } from "next/font/google";
 import { BookNow } from "@/components/BookNow";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { LocalBusinessJsonLd } from "@/components/LocalBusinessJsonLd";
@@ -7,16 +7,10 @@ import { SiteNav } from "@/components/SiteNav";
 import { defaultDescription, site } from "@/data/site";
 import "./globals.css";
 
-const alegreya = Alegreya_Sans_SC({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-alegreya",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["900"],
-  variable: "--font-playfair",
+  variable: "--font-inter",
+  display: "swap",
 });
 
 const ogTitle = "10 West Salon | Chagrin Falls, Ohio";
@@ -59,7 +53,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${alegreya.variable} ${playfair.variable} font-sans`}>
+      <body className={`${inter.variable} font-sans antialiased`}>
         <LocalBusinessJsonLd />
         <GoogleAnalytics measurementId={site.googleAnalyticsId} />
         <BookNow />

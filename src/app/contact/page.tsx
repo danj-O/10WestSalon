@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { InnerPage } from "@/components/InnerPage";
+import { PageHeading } from "@/components/PageHeading";
 import { SiteFooter } from "@/components/SiteFooter";
 import { defaultDescription, site } from "@/data/site";
 
@@ -15,7 +16,7 @@ export default function ContactPage() {
       <InnerPage>
         <div className="grid grid-cols-1 gap-2 px-2 pb-16 md:grid-cols-2">
           <div className="col-span-1 text-center md:col-span-2">
-            <h1 className="font-display text-2xl font-black">Contact / Find Us!</h1>
+            <PageHeading>Contact / Find Us!</PageHeading>
           </div>
           <section className="min-w-0 rounded bg-white px-8 py-6 shadow-md md:px-12">
             <p className="text-2xl">10 West Hair Salon</p>

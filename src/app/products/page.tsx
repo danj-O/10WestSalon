@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { InnerPage } from "@/components/InnerPage";
+import { PageHeading } from "@/components/PageHeading";
 import { SiteFooter } from "@/components/SiteFooter";
 import { productTiles } from "@/data/products";
 import { defaultDescription, site } from "@/data/site";
@@ -15,7 +16,7 @@ export default function ProductsPage() {
   return (
     <>
       <InnerPage>
-        <h1 className="mb-8 text-center font-display text-4xl font-black max-[600px]:text-2xl">Products</h1>
+        <PageHeading>Products</PageHeading>
         <div className="mx-auto max-w-6xl px-5 pb-16">
           {/* Multi-column masonry: portrait + landscape stack without forced crops */}
           <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">

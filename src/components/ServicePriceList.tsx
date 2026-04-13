@@ -1,10 +1,11 @@
-import type { ServiceBlock, ServiceEntry } from "@/data/services";
+import type { ServiceBlock, ServiceEntry } from "@/data/services"
+import { PageHeading } from "@/components/PageHeading"
 
 function slugify(title: string) {
   return title
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
+    .replace(/^-|-$/g, "")
 }
 
 function Entry({ entry }: { entry: ServiceEntry }) {
@@ -13,15 +14,13 @@ function Entry({ entry }: { entry: ServiceEntry }) {
       <p className="py-1.5 text-left text-xs italic text-neutral-600">
         <em>{entry.text}</em>
       </p>
-    );
+    )
   }
   return (
     <div className="flex flex-col gap-0.5 py-2 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
       <div className="min-w-0 flex-1 text-left">
         <p className="text-sm font-medium leading-snug text-neutral-900">{entry.title}</p>
-        {entry.description ? (
-          <p className="mt-1 text-xs leading-snug text-neutral-600">{entry.description}</p>
-        ) : null}
+        {entry.description ? <p className="mt-1 text-xs leading-snug text-neutral-600">{entry.description}</p> : null}
       </div>
       {entry.price ? (
         <p className="shrink-0 text-left text-sm font-semibold tabular-nums text-brand sm:min-w-[5rem] sm:text-right">
@@ -29,25 +28,17 @@ function Entry({ entry }: { entry: ServiceEntry }) {
         </p>
       ) : null}
     </div>
-  );
+  )
 }
 
 export function ServicePriceList({ blocks }: { blocks: ServiceBlock[] }) {
   return (
     <div className="mx-auto max-w-5xl px-3 pb-12 md:px-4">
-      <header className="mb-4 text-center md:mb-5">
-        <h1
-          id="services"
-          className="border-b border-black/20 pb-2 font-display text-2xl font-black tracking-tight text-black md:text-3xl"
-        >
-          10 West Salon Services
-        </h1>
-        <nav
-          className="mt-4 flex flex-wrap justify-center gap-2"
-          aria-label="Jump to section"
-        >
+      <header className="mb-8 text-center md:mb-10">
+        <PageHeading id="services">Services</PageHeading>
+        <nav className="flex flex-wrap justify-center gap-2" aria-label="Jump to section">
           {blocks.map((block) => {
-            const id = slugify(block.title);
+            const id = slugify(block.title)
             return (
               <a
                 key={block.title}
@@ -56,14 +47,14 @@ export function ServicePriceList({ blocks }: { blocks: ServiceBlock[] }) {
               >
                 {block.title}
               </a>
-            );
+            )
           })}
         </nav>
       </header>
 
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
         {blocks.map((block) => {
-          const id = slugify(block.title);
+          const id = slugify(block.title)
           return (
             <section
               key={block.title}
@@ -85,9 +76,7 @@ export function ServicePriceList({ blocks }: { blocks: ServiceBlock[] }) {
               </div>
               {block.subblocks?.map((sub) => (
                 <div key={sub.title} className="mt-3 border-t border-neutral-200 pt-3">
-                  <h3 className="mb-2 text-left font-display text-base font-bold text-neutral-900">
-                    {sub.title}
-                  </h3>
+                  <h3 className="mb-2 text-left font-display text-base font-bold text-neutral-900">{sub.title}</h3>
                   <div className="divide-y divide-neutral-200/90">
                     {sub.entries.map((entry, i) => (
                       <Entry key={`${sub.title}-${i}`} entry={entry} />
@@ -96,9 +85,9 @@ export function ServicePriceList({ blocks }: { blocks: ServiceBlock[] }) {
                 </div>
               ))}
             </section>
-          );
+          )
         })}
       </div>
     </div>
-  );
+  )
 }

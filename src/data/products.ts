@@ -43,20 +43,6 @@ export const productTiles: ProductTile[] = [
     href: "https://www.paulmitchell.com/pages/awapuhi-wild-ginger",
   },
   {
-    imageSrc: "/img/products/gelish_logo.webp",
-    imageAlt: "Gelish nail products",
-    width: 474,
-    height: 351,
-    href: "https://gelish.com/",
-  },
-  {
-    imageSrc: "/img/products/keratincoppola.webp",
-    imageAlt: "Keratin smoothing treatments",
-    width: 960,
-    height: 701,
-    href: "https://keratincomplex.com/",
-  },
-  {
     imageSrc: "/img/products/nioxin.webp",
     imageAlt: "Nioxin scalp and hair care",
     width: 480,

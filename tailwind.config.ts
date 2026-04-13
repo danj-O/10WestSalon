@@ -12,8 +12,8 @@ export default {
         brand: "#df4747",
       },
       fontFamily: {
-        sans: ["var(--font-alegreya)", "system-ui", "sans-serif"],
-        display: ["var(--font-playfair)", "Georgia", "serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
     },
   },

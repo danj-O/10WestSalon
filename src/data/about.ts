@@ -29,6 +29,12 @@ export type Stylist = {
 export const aboutIntro =
   "10 West Salon in Chagrin Falls has catered to Chagrin Valley families since 1983. We pride ourselves in using high quality products and our hair stylists are the best!"
 
+/** Hero image below the About Us heading (full-width photo). */
+export const aboutHeroImage = {
+  imageSrc: "/img/salon.webp",
+  imageAlt: "Interior of 10 West Salon, Chagrin Falls",
+}
+
 export const stylists: Stylist[] = [
   // { name: "Les", imageSrc: "/img/les2.webp", imageAlt: "Les, stylist at 10 West Salon", role: "" },
   {
