@@ -4,7 +4,7 @@ import { InnerPage } from "@/components/InnerPage";
 import { PageHeading } from "@/components/PageHeading";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SiteFooter } from "@/components/SiteFooter";
-import { aboutHeroImage, aboutIntro, stylists } from "@/data/about";
+import { aboutIntro, stylists } from "@/data/about";
 import { defaultDescription, site } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -18,21 +18,10 @@ export default function AboutPage() {
     <>
       <InnerPage>
         <PageHeading>About Us</PageHeading>
-        <div className="relative mx-auto mt-6 max-w-4xl overflow-hidden rounded-lg shadow-md ring-1 ring-black/5">
-          <Image
-            src={aboutHeroImage.imageSrc}
-            alt={aboutHeroImage.imageAlt}
-            width={640}
-            height={480}
-            className="h-auto w-full object-cover"
-            sizes="(max-width: 896px) 92vw, 56rem"
-            priority
-          />
-        </div>
-        <p className="mx-auto mt-8 max-w-4xl bg-white/30 px-6 py-8 text-center text-xl leading-relaxed max-[600px]:px-5 max-[600px]:text-base">
+        <p className="mx-auto max-w-4xl bg-white/30 px-6 py-5 text-center text-xl leading-relaxed max-[600px]:px-5 max-[600px]:text-base">
           {aboutIntro}
         </p>
-        <SectionHeading className="mt-8">Our Stylists</SectionHeading>
+        <SectionHeading className="mt-5">Our Stylists</SectionHeading>
         <div className="flex flex-wrap justify-evenly gap-4 px-5 py-6">
           {stylists.map((s) => (
             <div

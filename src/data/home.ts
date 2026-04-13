@@ -39,8 +39,8 @@ export const homeCardRows: HomeCard[][] = [
   [
     {
       href: "/about",
-      imageSrc: "/img/entrance.webp",
-      imageAlt: "Entrance to 10 West Salon, Chagrin Falls",
+      imageSrc: "/img/salon.webp",
+      imageAlt: "Interior of 10 West Salon, Chagrin Falls",
       heading: "About Us",
       body: "Learn more about us and get to know our stylists.",
     },

@@ -21,7 +21,7 @@ export function SectionHeading({
   return (
     <h2
       className={`font-display text-2xl font-bold text-neutral-900 sm:text-3xl ${
-        margin ? "mb-6 sm:mb-8" : ""
+        margin ? "mb-5 sm:mb-6" : ""
       } ${align === "center" ? "text-center" : "text-left"} ${className}`.trim()}
     >
       {children}

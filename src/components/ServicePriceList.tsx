@@ -34,7 +34,7 @@ function Entry({ entry }: { entry: ServiceEntry }) {
 export function ServicePriceList({ blocks }: { blocks: ServiceBlock[] }) {
   return (
     <div className="mx-auto max-w-5xl px-3 pb-12 md:px-4">
-      <header className="mb-8 text-center md:mb-10">
+      <header className="mb-6 text-center sm:mb-8">
         <PageHeading id="services">Services</PageHeading>
         <nav className="flex flex-wrap justify-center gap-2" aria-label="Jump to section">
           {blocks.map((block) => {
