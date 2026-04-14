@@ -52,15 +52,15 @@ export const productTiles: ProductTile[] = [
   {
     imageSrc: "/img/products/olaplex.webp",
     imageAlt: "Olaplex",
-    width: 4032,
-    height: 3024,
+    width: 1600,
+    height: 1200,
     href: "https://olaplex.com/",
   },
   {
     imageSrc: "/img/products/paulmitchell.webp",
     imageAlt: "Paul Mitchell",
-    width: 4032,
-    height: 3024,
+    width: 1600,
+    height: 1200,
     href: "https://www.paulmitchell.com/",
   },
   {
